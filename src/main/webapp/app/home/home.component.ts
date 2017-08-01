@@ -3,6 +3,8 @@ import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 
 import { Account, LoginModalService, Principal } from '../shared';
+import { Company } from '../entities/company/company.model';
+import { CompanyService } from '../entities/company/company.service';
 
 @Component({
     selector: 'jhi-home',
@@ -14,11 +16,13 @@ import { Account, LoginModalService, Principal } from '../shared';
 })
 export class HomeComponent implements OnInit {
     account: Account;
+    company: Company;
     modalRef: NgbModalRef;
 
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
+        private companyService: CompanyService,
         private eventManager: JhiEventManager
     ) {
     }
@@ -26,14 +30,22 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this.principal.identity().then((account) => {
             this.account = account;
+            this.setCompanyInfo();
         });
         this.registerAuthenticationSuccess();
+    }
+
+    setCompanyInfo() {
+        this.companyService.findByUser().subscribe((company) => {
+            this.company = company;
+        });
     }
 
     registerAuthenticationSuccess() {
         this.eventManager.subscribe('authenticationSuccess', (message) => {
             this.principal.identity().then((account) => {
                 this.account = account;
+                this.setCompanyInfo();
             });
         });
     }
