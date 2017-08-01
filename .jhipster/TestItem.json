@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "relatedCompany",
+            "otherEntityName": "company",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "companyName"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "itemName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "itemUnit",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "itemCost",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170801222921",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "test_item",
+    "pagination": "pagination"
+}

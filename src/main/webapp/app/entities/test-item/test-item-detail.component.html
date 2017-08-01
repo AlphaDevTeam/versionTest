@@ -1,0 +1,39 @@
+
+<div *ngIf="testItem">
+    <h2><span>Test Item</span> {{testItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Item Name</span></dt>
+        <dd>
+            <span>{{testItem.itemName}}</span>
+        </dd>
+        <dt><span>Item Unit</span></dt>
+        <dd>
+            <span>{{testItem.itemUnit}}</span>
+        </dd>
+        <dt><span>Item Cost</span></dt>
+        <dd>
+            <span>{{testItem.itemCost}}</span>
+        </dd>
+        <dt><span>Related Company</span></dt>
+        <dd>
+            <div *ngIf="testItem.relatedCompany">
+                <a [routerLink]="['/company', testItem.relatedCompany?.id]">{{testItem.relatedCompany?.companyName}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'test-item/'+ testItem.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
