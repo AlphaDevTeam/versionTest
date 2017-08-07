@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "companyName"
+        },
+        {
+            "relationshipName": "purchaseOrder",
+            "otherEntityName": "purchaseOrder",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "poNumber"
+        },
+        {
+            "relationshipName": "testItem",
+            "otherEntityName": "testItem",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "itemName"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "qty",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "ref1",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170806182101",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "purchase_order_details",
+    "pagination": "pagination"
+}

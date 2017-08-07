@@ -8,9 +8,13 @@
     <include file="config/liquibase/changelog/20170730193355_added_entity_ExtraUser.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170801174050_added_entity_Company.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170801222921_added_entity_TestItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806181823_added_entity_PurchaseOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806182101_added_entity_PurchaseOrderDetails.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20170730193355_added_entity_constraints_ExtraUser.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170801174050_added_entity_constraints_Company.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20170801222921_added_entity_constraints_TestItem.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806181823_added_entity_constraints_PurchaseOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20170806182101_added_entity_constraints_PurchaseOrderDetails.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

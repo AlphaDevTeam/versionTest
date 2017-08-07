@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "companyName"
+        },
+        {
+            "relationshipName": "purchaseOrderDetails",
+            "otherEntityName": "purchaseOrderDetails",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "purchaseOrder"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "poNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "orderDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170806181823",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "purchase_order",
+    "pagination": "pagination"
+}
